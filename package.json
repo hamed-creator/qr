@@ -1,0 +1,23 @@
+{
+  "name": "qr-studio",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "client"
+  ],
+  "scripts": {
+    "dev": "concurrently -k \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:server": "node --watch server/index.js",
+    "dev:client": "npm run dev --workspace qr-studio-client",
+    "build": "npm run build --workspace qr-studio-client",
+    "start": "node server/index.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "express": "^4.21.1",
+    "validator": "^13.12.0"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  }
+}
