@@ -38,3 +38,15 @@ Append-only record of implementation decisions, changes, and verification. Entri
 - URL normalization/API responses and same-origin static hosting: [server/index.js:10](./server/index.js#L10), [server/index.js:20](./server/index.js#L20), [server/index.js:55](./server/index.js#L55).
 - Single-workspace dev/build/start/test scripts: [package.json:5](./package.json#L5); patched client build tools: [client/package.json:20](./client/package.json#L20); Vite API proxy and Express build output: [client/vite.config.ts:12](./client/vite.config.ts#L12) and [client/vite.config.ts:17](./client/vite.config.ts#L17).
 - Multi-stage container build and production command: [Dockerfile:1](./Dockerfile#L1), [Dockerfile:12](./Dockerfile#L12), and [Dockerfile:23](./Dockerfile#L23).
+
+## 2026-11-26 — Brand wordmark and purple accents
+
+- Replaced the QR tile and Latin `qrstudio` header mark with the supplied Arabic brand name `عابدين`, marked as Arabic and right-to-left. Added a restrained purple to the wordmark, headline accent, eyebrow icon, and heading stamp while keeping the existing green/neutral controls intact.
+- Inspected `C:\Users\T14\Downloads\old-antic.zip`: its TTFs contain Arabic glyphs, but their OS/2 embedding flags are restricted. To avoid bundling a font without web-embedding rights, the site prefers an installed `Old Antic Bold` font and falls back to Arabic-capable system fonts. The font itself was not copied into the app.
+- Next: rebuild and run the existing API tests, then verify the updated header in the browser.
+
+## 2026-11-26 — Branding verification
+
+- `npm run build` passed with TypeScript and Vite; `npm test` passed all 3 URL API tests.
+- Opened the production app in the browser and confirmed the header exposes the Arabic wordmark. The wordmark markup is at [client/src/App.tsx:215](./client/src/App.tsx#L215); the local Old Antic preference and Arabic fallbacks are at [client/src/index.css:25](./client/src/index.css#L25).
+- Purple theme accents are defined at [client/src/index.css:4](./client/src/index.css#L4) and applied to the wordmark, headline, and stamp at [client/src/index.css:24](./client/src/index.css#L24), [client/src/index.css:34](./client/src/index.css#L34), and [client/src/index.css:36](./client/src/index.css#L36).

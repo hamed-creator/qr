@@ -211,9 +211,8 @@ function App() {
   return (
     <main className="app-shell">
       <header className="topbar">
-        <a className="brand" href="/" aria-label="QR Studio home">
-          <span className="brand-mark"><span /><span /><span /><span /></span>
-          <span>qr<span className="brand-light">studio</span></span>
+        <a className="brand" href="/" aria-label="Abideen QR Studio home">
+          <span className="brand-wordmark" lang="ar" dir="rtl">عابدين</span>
         </a>
         <span className="topbar-note"><span className="status-dot" /> PRINT-READY, MADE SIMPLE</span>
       </header>

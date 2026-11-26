@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
 
 :root {
+  --brand-purple: #75619a;
+  --brand-purple-soft: #d7cde5;
   font-family: 'DM Sans', sans-serif;
   color: #17211d;
   background: #f5f4f0;
@@ -19,23 +21,20 @@ button { color: inherit; }
 
 .app-shell { width: min(1120px, calc(100% - 64px)); margin: 0 auto; }
 .topbar { height: 72px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #e6e5df; }
-.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: #17211d; font: 800 17px 'Manrope', sans-serif; letter-spacing: -1px; }
-.brand-light { color: #7a8078; font-weight: 500; }
-.brand-mark { width: 21px; height: 21px; padding: 3px; border: 2px solid #253d31; border-radius: 6px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px; transform: rotate(-5deg); }
-.brand-mark span { border-radius: 1px; background: #315a43; }
-.brand-mark span:nth-child(2) { background: transparent; border: 1.5px solid #315a43; }
+.brand { display: flex; align-items: center; text-decoration: none; color: var(--brand-purple); }
+.brand-wordmark { font: 400 25px/1 'Old Antic Bold', 'Noto Naskh Arabic', 'Noto Sans Arabic', serif; letter-spacing: 0; }
 .topbar-note, .eyebrow, .field-label, .preview-caption, .footer { font-family: 'DM Mono', monospace; letter-spacing: .08em; }
 .topbar-note { display: flex; align-items: center; gap: 8px; color: #7c827b; font-size: 9px; }
 .status-dot, .live-tag > span { width: 7px; height: 7px; background: #638d6e; border-radius: 50%; display: inline-block; }
 .page-heading { display: flex; justify-content: space-between; align-items: center; padding: 39px 0 30px; }
 .eyebrow { color: #7c877d; font-size: 9px; font-weight: 500; display: flex; align-items: center; gap: 7px; margin: 0 0 10px; }
-.page-heading .eyebrow svg { color: #65866b; }
+.page-heading .eyebrow svg { color: var(--brand-purple); }
 h1, h2, p { margin-top: 0; }
 h1 { margin-bottom: 9px; font: 700 39px/1.1 'Manrope', sans-serif; letter-spacing: -2px; }
-h1 span { color: #6d8b72; }
+h1 span { color: var(--brand-purple); }
 .intro { margin: 0; font-size: 13px; color: #737972; }
-.heading-stamp { display: flex; gap: 9px; align-items: center; transform: rotate(4deg); color: #77937b; }
-.heading-stamp > span { border: 1px solid #b6c4b5; border-radius: 50%; width: 43px; height: 43px; display: grid; place-items: center; font: 600 14px 'DM Mono', monospace; }
+.heading-stamp { display: flex; gap: 9px; align-items: center; transform: rotate(4deg); color: var(--brand-purple); }
+.heading-stamp > span { border: 1px solid var(--brand-purple-soft); border-radius: 50%; width: 43px; height: 43px; display: grid; place-items: center; font: 600 14px 'DM Mono', monospace; }
 .heading-stamp small { font: 8px/1.5 'DM Mono', monospace; letter-spacing: .05em; }
 .workspace { display: grid; grid-template-columns: minmax(0, 1fr) 390px; gap: 22px; align-items: start; }
 .controls-column { display: grid; gap: 12px; }
